@@ -21,16 +21,13 @@ body > header > * {
   display: flex;
   align-items: center;
 }
-body > header .pageLogo {
-  border: 2px dashed red;
-}
 body > header .pageLogo a {
   color: inherit;
   text-decoration: none;
   display: flex;
 }
 body > header .pageLogo a b {
-  font-size: 30px;
+  font-size: 50px;
 }
 body > header nav {
   position: relative;
@@ -40,7 +37,6 @@ body > header nav #toggler {
   display: none;
 }
 body > header nav label {
-  border: 2px dashed yellow;
   position: absolute;
   width: 48px;
   height: 48px;
@@ -49,7 +45,7 @@ body > header nav label {
   cursor: pointer;
 }
 body > header nav div {
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 2s;
   background-color: rgb(255, 255, 255);
   position: absolute;
@@ -73,7 +69,7 @@ body > header ul {
   right: 0;
   top: 48px;
   position: absolute;
-  background-color: rgb(149, 214, 149);
+  background-color: rgb(255, 255, 255);
   list-style: none;
   padding: 0;
 }
@@ -82,7 +78,7 @@ body > header ul li {
 }
 body > header ul li a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   text-align: center;
   justify-content: center;
   align-items: center;
