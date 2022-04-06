@@ -4,7 +4,6 @@
 }
 
 body {
-  border: 10px dashed red;
   margin: 0;
   min-height: 100vh;
   color: #fff;
@@ -14,12 +13,26 @@ body {
   background-position: center top;
 }
 body > header {
-  border: 2px dashed red;
+  padding: 1em 2em;
   display: flex;
   justify-content: space-between;
 }
+body > header > * {
+  display: flex;
+  align-items: center;
+}
+body > header .pageLogo {
+  border: 2px dashed red;
+}
+body > header .pageLogo a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
+body > header .pageLogo a b {
+  font-size: 30px;
+}
 body > header nav {
-  border: 2px dashed blue;
   position: relative;
   min-height: 48px;
 }
@@ -35,7 +48,8 @@ body > header nav label {
   top: 0;
   cursor: pointer;
 }
-body > header nav label div {
+body > header nav div {
+  border-radius: 5px;
   transition: 2s;
   background-color: rgb(255, 255, 255);
   position: absolute;
@@ -43,46 +57,66 @@ body > header nav label div {
   left: 10%;
   height: 10%;
 }
-body > header nav label div:nth-child(1) {
+body > header nav div:nth-child(1) {
   top: 17.5%;
 }
-body > header nav label div:nth-child(2) {
+body > header nav div:nth-child(2) {
   top: 45%;
 }
-body > header nav label div:nth-child(3) {
+body > header nav div:nth-child(3) {
   top: 72.5%;
 }
-body > header nav ul {
+body > header ul {
   display: none;
-  border: 2px dashed green;
   flex-direction: column;
   margin: 0;
   right: 0;
   top: 48px;
   position: absolute;
+  background-color: rgb(149, 214, 149);
+  list-style: none;
+  padding: 0;
 }
-body > header nav #toggler:checked ~ ul {
+body > header ul li {
+  padding: 0.7em 0.7em;
+}
+body > header ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+body #toggler:checked ~ ul {
   display: flex;
 }
-body > header nav #toggler:checked ~ label {
+body #toggler:checked ~ label {
   border-color: blue;
 }
-body > header nav #toggler:checked ~ label div:nth-child(1) {
+body #toggler:checked ~ label div:nth-child(1) {
   transform: rotate(45deg);
   top: 45%;
 }
-body > header nav #toggler:checked ~ label div:nth-child(2) {
+body #toggler:checked ~ label div:nth-child(2) {
   opacity: 0;
 }
-body > header nav #toggler:checked ~ label div:nth-child(3) {
+body #toggler:checked ~ label div:nth-child(3) {
   transform: rotate(-45deg);
   top: 45%;
 }
-body > header .hamburger {
+
+.hamburger {
   border: 2px dashed yellow;
 }
+
 @media (min-width: 768px) {
-  body > header nav ul {
+  label {
     display: none;
+  }
+
+  ul {
+    display: flex !important;
+    flex-direction: row !important;
+    position: static !important;
   }
 }/*# sourceMappingURL=style.css.map */
