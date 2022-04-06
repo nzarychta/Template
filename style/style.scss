@@ -22,6 +22,7 @@ body{
         border: 2px dashed blue;
         position: relative;
         min-height:$buttonSize;
+        //DOMYŚLNE WYŚWIETLANIE 
         #toggler{display: none;}
 
         label{
@@ -35,7 +36,7 @@ body{
         
             //hamburger//
             div{
-                
+                transition: 2s;
                 background-color: rgb(255, 255, 255);
                 position: absolute;
                 width: 80%;
@@ -50,7 +51,7 @@ body{
                     
                 }
                 &:nth-child(3){
-                    top: 80%;
+                    top: 72.5%;
                 }
             
             }
@@ -68,10 +69,32 @@ body{
             
             
         }
-         #toggler:checked ~ ul{
-             display: flex;
-
+        //PO KLIKNIĘCIU NA HAMBURGER
+         //#toggler:checked ~ ul{
+            // display: flex;}
+            
+         
+         #toggler:checked{
+             ~ ul {display: flex;}
+             ~ label {
+                 border-color: blue;
+                 div{
+                     &:nth-child(1){
+                         
+                         transform: rotate(45deg);
+                         top:45%;
+                     }
+                     &:nth-child(2){
+                         opacity: 0;
+                     }
+                     &:nth-child(3){
+                        transform: rotate(-45deg);
+                        top:45%;
+                     }
+                 }
+             }
          }
+         
     }
     .hamburger{
         border: 2px dashed yellow;

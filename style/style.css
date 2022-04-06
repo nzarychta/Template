@@ -36,6 +36,7 @@ body > header nav label {
   cursor: pointer;
 }
 body > header nav label div {
+  transition: 2s;
   background-color: rgb(255, 255, 255);
   position: absolute;
   width: 80%;
@@ -49,7 +50,7 @@ body > header nav label div:nth-child(2) {
   top: 45%;
 }
 body > header nav label div:nth-child(3) {
-  top: 80%;
+  top: 72.5%;
 }
 body > header nav ul {
   display: none;
@@ -62,6 +63,20 @@ body > header nav ul {
 }
 body > header nav #toggler:checked ~ ul {
   display: flex;
+}
+body > header nav #toggler:checked ~ label {
+  border-color: blue;
+}
+body > header nav #toggler:checked ~ label div:nth-child(1) {
+  transform: rotate(45deg);
+  top: 45%;
+}
+body > header nav #toggler:checked ~ label div:nth-child(2) {
+  opacity: 0;
+}
+body > header nav #toggler:checked ~ label div:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 45%;
 }
 body > header .hamburger {
   border: 2px dashed yellow;
