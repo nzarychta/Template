@@ -121,17 +121,47 @@ main {
 }
 main .wrapper {
   border: 5px dashed yellow;
-  display: flex;
 }
 main .wrapper > header {
   border: 5px dashed blue;
   flex: 1;
 }
+main .wrapper > header h1 {
+  margin-bottom: 0;
+}
+main .wrapper > header h2 {
+  margin-top: 0;
+}
+main .wrapper > header button {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  min-height: 1.5em;
+  border-radius: 1.5em;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 2.5em;
+}
 main .wrapper > article {
   flex: 1;
+}
+main .wrapper > article .playButton {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  min-height: 1.5em;
+  border-radius: 1.5em;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0em;
 }
 main .wrapper > article header .container {
   border: 5px dashed green;
   overflow-y: scroll;
   max-height: 45vh;
+}
+@media (min-width: 768px) {
+  main .wrapper > article header {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */
