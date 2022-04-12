@@ -1,9 +1,13 @@
 @charset "UTF-8";
+/*track*/
+/*handle*/
 * {
   box-sizing: border-box;
 }
 
 body {
+  line-height: 1.8em;
+  font-family: "montserrat";
   background-image: url("../IMG/Rectangle 1.jpg");
   /*przykrywa cały obszar - cover*/
   background-size: cover;
@@ -25,9 +29,12 @@ body > header .pageLogo a {
   color: inherit;
   text-decoration: none;
   display: flex;
+  align-items: center;
 }
 body > header .pageLogo a b {
-  font-size: 30px;
+  font-family: "Philosopher";
+  font-size: clamp(1.5em, 2vw, 2em);
+  padding-left: 0.3em;
 }
 body > header nav {
   position: relative;
@@ -63,10 +70,11 @@ body > header nav label div:nth-child(3) {
   top: 72.5%;
 }
 body > header nav ul {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   padding: 0 0.7em;
   list-style: none;
+  font-family: "Lato";
   display: none;
   flex-direction: column;
   position: absolute;
@@ -107,9 +115,12 @@ body #toggler:checked ~ label div:nth-child(3) {
     display: none;
   }
   body ul {
+    font-size: 1.5em;
+    background-color: rgb(255, 255, 255);
     display: flex !important;
     flex-direction: row !important;
     position: static !important;
+    padding: 0.8em 5em;
   }
 }
 
@@ -118,16 +129,21 @@ main {
   padding: 0 1em;
 }
 main .wrapper {
-  border: 5px dashed yellow;
+  display: flex;
 }
 main .wrapper > header {
+  font-family: "Lemon";
   flex: 1;
+  line-height: clamp(1.8em, 4vw, 3em);
 }
 main .wrapper > header h1 {
   margin-bottom: 0;
+  font-size: clamp(2.5em, 4vw, 4em);
+  line-height: unset;
 }
 main .wrapper > header h2 {
   margin-top: 0;
+  font-size: clamp(2em, 3vw, 2.5em);
 }
 main .wrapper > header button {
   background-color: transparent;
@@ -139,6 +155,7 @@ main .wrapper > header button {
   display: inline-block;
   padding: 0.5em 2.5em;
   margin-bottom: 10vh;
+  font-size: clamp(1em, 2vw, 1.5em);
 }
 main .wrapper > article {
   flex: 1;
@@ -158,16 +175,20 @@ main .wrapper > article .playButton {
   position: relative;
 }
 main .wrapper > article .playButton span {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
-  left: 0.245em;
+  left: 0;
   font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main .wrapper > article header .container {
-  border: 5px dashed green;
   padding-left: 1em;
   overflow-y: scroll;
-  max-height: 45vh;
+  max-height: 35vh;
 }
 @media (min-width: 768px) {
   main .wrapper {
